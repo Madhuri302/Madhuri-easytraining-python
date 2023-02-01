@@ -1,0 +1,98 @@
+LIST OF VARIABLES:
+
+L=[1,4,7.4,"madhu"]
+L
+[1, 4, 7.4, 'madhu']
+L[3]
+'madhu'
+L[2:3]
+[7.4]
+L[2:4]
+[7.4, 'madhu']
+L[0:1]
+[1]
+L[:2]
+[1, 4]
+L[:3]
+[1, 4, 7.4]
+L[-1]
+'madhu'
+L[::-1]
+['madhu', 7.4, 4, 1]
+
+
+When different variables like integers,floats,strings are entered in a single list then it will print or show the output.
+But in the case of arrays defining different datatypes in a single array is not possible.
+So it is better to use list datatype
+
+append()-adds a number in the end of list.
+extend()--adds two or more numbers in the end of the list.
+insert()-insert an term at the defined index.
+remove()-it removes a number from the list.
+pop()-removes and returns an element at the given index.
+clear()-removes all items from the list.
+index()-returns the index of the first matched item.
+court()-returns the court of the no.of elements present in the list.
+sort()-arrange the list in ascending order.
+reverse()-it reverse the list of elements.
+copy()-it copies the given elements of list.
+
+PROGRAMMES:
+1.CREATE A LIST WITH 10 ITEMS AND PRINT ELEMENTS ONE BY ONE.
+2.CREATE A LIST WITH 5 FLOAT NUMBERS.FIND OUT AND DISPLAY SUM AND AVERAGE.
+3.AFTER CREATING A LIST WITH 6 ELEMENTS FROM THE USER.EXTRACT ONLY EVEN NUMBERS AND PRINT.
+
+
+
+GET LIST OF NUMBERS AS INPUT,RETURN THEIR PRODUCT IF THE PRODUCT LESS THAN 750 ELSE RETURN THE SUM.
+
+l=list(map(int,input("enter").split(" ")))
+print(l)
+
+x=1
+y=0
+for i in 1:
+    x=x*i
+    y=y+1
+if x<=750:
+    print("product",x)   
+else:
+    print("sum",y)
+LIST  OF COMPREHENSIONS 
+program:
+L=["hyd","vizag","chennai","vijayawada"]
+city = []
+for n in L:
+    if "v" in n:
+        city.append(n)
+print(city)
+
+L1=[2**x for x in range(2,10)]
+print(L1)
+
+L2=[a for a in range(100,201,20)]
+print(L2)
+
+L3=[1,2,3,4,5,6]
+L4=[i for i in L3 if (i<5)]
+print(L4)
+
+output
+['vizag', 'vijayawada']
+[4, 8, 16, 32, 64, 128, 256, 512]
+[100, 120, 140, 160, 180, 200]
+[1, 2, 3, 4]
+
+#set
+1.duplicates are not allowed, it is unordered, index is not allowed.
+add(element)
+update(extend)
+discard (to remove element)
+remove(to remove element get error is element not present)
+#tuple:
+1.tuple is ordered,normal brackets are used to define elements.
+2.functions are count and indexing
+
+#dictionary:
+1.dictionary contains elements with 2 units keys and values
+2.keys must be unique

@@ -1,0 +1,179 @@
+LIST OF VARIABLES:
+
+L=[1,4,7.4,"madhu"]
+L
+[1, 4, 7.4, 'madhu']
+L[3]
+'madhu'
+L[2:3]
+[7.4]
+L[2:4]
+[7.4, 'madhu']
+L[0:1]
+[1]
+L[:2]
+[1, 4]
+L[:3]
+[1, 4, 7.4]
+L[-1]
+'madhu'
+L[::-1]
+['madhu', 7.4, 4, 1]
+
+
+1.OPERATIONS:
+L=[1,4,1,1,6,4,1,2]
+len(L)
+8
+L.count(1)
+4
+L. append(400)
+L
+[1, 4, 1, 1, 6, 4, 1, 2, 400]
+L.extend([100,200,300])
+100
+100
+1
+1
+L.remove(1)
+L
+[4, 1, 1, 6, 4, 1, 2, 400, 100, 200, 300]
+L.pop(-2)
+200
+L
+[4, 1, 1, 6, 4, 1, 2, 400, 100, 300]
+L.sort()
+L
+[1, 1, 1, 2, 4, 4, 6, 100, 300, 400]
+L.reverse()
+L
+[400, 300, 100, 6, 4, 4, 2, 1, 1, 1]
+
+
+2.CREATE A LIST WITH 10 ITEMS AND PRINT ELEMENTS ONE BY ONE.
+L=[1,2,3,4,5,6,7,8,9,10]
+
+for i in range(len(L)):
+    print(L[i]
+
+3.CREATE A LIST WITH 5 FLOAT NUMBERS.FIND OUT AND DISPLAY SUM AND AVERAGE.
+L=[1.0,2.5,4.5,5.6,6.5]
+
+sum=0
+
+for i in L:
+    sum=sum+i
+ print(sum    average=(sum%2)
+    print(average)
+
+
+
+
+4.AFTER CREATING A LIST WITH 6 ELEMENTS FROM THE USER.EXTRACT ONLY EVEN NUMBERS AND PRINT.l=[1,2,3,4,5,6]
+
+for i in l:
+    if(i%2==0):
+        print(i)
+
+
+EXAMPLE with input:
+size=int(input("size:"))
+
+L=[]
+
+for i in range(size):
+    ele=int(input("element:"))
+    L.append(ele)
+
+print(L)
+
+    
+5.GET LIST OF NUMBERS AS INPUT,RETURN THEIR PRODUCT IF THE PRODUCT LESS THAN 750 ELSE RETURN THE SUM.
+
+l=list(map(int,input("enter").split(" ")))
+print(l)
+
+x=1
+y=0
+for i in 1:
+    x=x*i
+    y=y+1
+if x<=750:    
+    print("product",x)
+else:
+    print("sum",y)
+
+LIST  OF COMPREHENSIONS 
+program:
+L=["hyd","vizag","chennai","vijayawada"]
+city = []
+for n in L:
+    if "v" in n:
+        city.append(n)
+print(city)
+
+L1=[2**x for x in range(2,10)]
+print(L1)
+
+L2=[a for a in range(100,201,20)]
+print(L2)
+
+L3=[1,2,3,4,5,6]
+L4=[i for i in L3 if (i<5)]
+print(L4)
+
+output
+['vizag', 'vijayawada']
+[4, 8, 16, 32, 64, 128, 256, 512]
+[100, 120, 140, 160, 180, 200]
+[1, 2, 3, 4]
+
+#set:
+s={1,2,4,5,6,8}
+s.add(8)
+print(s)
+s.update([3,4,5])
+print(s)
+s.discard(4)
+print(s)
+s.remove(1)
+print(s)
+
+
+output:
+
+{1, 2, 4, 5, 6, 8}
+{1, 2, 3, 4, 5, 6, 8}
+{1, 2, 3, 5, 6, 8}
+{2, 3, 5, 6, 8}
+
+#symmetric difference:
+s1={12,24,25,45}
+s2={34,42,56}
+s1^s2
+print(s1.symmetric_difference(s2))
+output:
+{34, 42, 12, 45, 56, 24, 25}
+
+#tuple:
+t=(4,3,6,9.5,"chocklate")
+type(t)
+<class 'tuple'>
+t.count(4)
+1
+t.index(4)
+0
+#dictionary:
+d={1:"one",2:"two"}
+ d
+{1: 'one', 2: 'two'}
+type(d)
+<class 'dict'>
+d.keys()
+dict_keys([1, 2])
+d.values()
+dict_values(['one', 'two'])
+d.items()
+dict_items([(1, 'one'), (2, 'two')])
+
+
