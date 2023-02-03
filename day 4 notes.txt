@@ -1,0 +1,228 @@
+list comprehension: creating a list by using the existing list
+dictionary comprehension: creating a new dictionary from another dictionary
+
+example:
+d={n:n*n for n in range(1,5)}
+print(d)
+{1: 1, 2: 4, 3: 9, 4: 16}
+#calculating product price for 5 units
+old={"rice":60,"dhaal":120,"oil":150}
+new={product:price*5 for (product,price)in old.items()}
+print(new)
+{'rice': 300, 'dhaal': 600, 'oil': 750}
+#with checks    
+real={"sam":24,"angel":18,"kumar":35}
+now={name:age for (name,age) in real.items()
+     if (age>20)}
+print(now)
+{'sam': 24, 'kumar': 35}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1.create a list1.create a list with 8 customer names and display a dictionary that has customers' names along with discounts for them from a particular shop
+
+program:
+
+import random
+
+cust=["madhuri","navya","jahnavi","naveen","lokesh","surya","jyothi","surendra"]
+cust_dict={names:random.randint(1,100) for names in cust}
+print(cust_dict)
+
+output:
+{'madhuri': 36, 'navya': 13, 'jahnavi': 93, 'naveen': 21, 'lokesh': 55, 'surya': 14, 'jyothi': 33, 'surendra': 56}
+ 
+#zip is used when list are to be joined as dictionary
+
+
+2. create 2 lists  first with 5 student names and 2nd with total marks(0-500),display a dictionary that should have keys as student names and values as their percentage
+program:
+stu_ent=["madhuri","navya","jahnavi","naveen","lokesh"]
+marks=[450,345,400,350,500]
+perc_age=[]
+for i in marks:
+    p=i/500*100
+    perc_age.append(p)
+print(perc_age)    
+dict={a:b for (a,b) in zip(stu_ent,perc_age)}
+print(dict)
+output:
+[90.0, 69.0, 80.0, 70.0, 100.0]
+{'madhuri': 90.0, 'navya': 69.0, 'jahnavi': 80.0, 'naveen': 70.0, 'lokesh': 100.0}
+
+
+#another code:
+import random
+student_names=list(map(str,input("enter names:")))
+marks=[]
+for i in range(len(student_names)):
+    a = (random.randint(300,500)/500)*100
+    marks.append(a)
+my_dict={x:y for (x,y) in zip(student_names,marks)}
+print(my_dict)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+#strings:
+
+n="hi i'am "madhuri""
+print(n)
+n="hi i'am"
+print(n)
+nm="hi i'am "
+print(nm)
+m='hi i\'am'
+print(m)
+
+1.string functions:
+*s.upper()
+*s.lower() or s.casefold()
+*s.capitalize()
+*s.replace('h','a',)
+*s.strip()
+*s.split()/s.split('.')/s.split('a')
+*s.center(31,'*'):it will give 31 spaces with * and print 31.
+*s.count('a')
+*s.count('a',5,len(s))  after 5 indexes it will check 'a' in a string
+*s.endswith('a',o,len(s))  it checks string ends with a or not
+*s.find('a'o,len(s))  checks a and returns index value of first occurrence of 'a'
+*a.index('a',7,len(s))   from 7 to end where a there returns first occurrence of that characters index.
+*s.islower()/s.isupper()-----all words starts with case letters.
+*caps/max(s)  returns greater character like a>b>c....>z
+*min(s)--space is lesser than a<b<c.....
+*s.startswith('hello',o,len(s)
+*s.rfind('a',o,len(s)).....from reverse first occurrence or last occurrence
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+#list, set, and dictionary is mutable. Mutable means changeable
+#int, float, double, boolean, and tuple are immutable.
+#they are immutable because they can't be changed after creation and their id address is different every time as it stores
+
+example:
+x=10
+x
+10
+id(x)
+2705654153744
+r=200
+r
+200
+r=r+r
+r
+400
+L=[2,3,4]
+id(L)
+2705691567040
+L.append(45)
+L
+[2, 3, 4, 45]
+id(L)
+2705691567040
+
+ 
+
+1. get 1 string as input along with a character find out and display whether that particular character is present in the string or not.enter:madhuri
+program:
+s=input("enter:")
+char=input()
+for i in s:
+    print(i)
+    if i==char:
+        f=1
+        break
+    else:
+        f=0
+print(f)
+if f==1:
+    print("present")
+else:
+    print("not present")
+output:
+enter:madhuri
+m
+m
+1
+present.
+
+#another method:
+s=input("enter:")
+char=input()
+if char in s:
+   print("present")
+else:
+   print("not present")
+
+#another one:
+s=input("enter the string:")
+char=input("enter required char:")
+a="yes" if char in s else no
+print(a)
+
+
+
+2. check whether the string is palindrome or not. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. after getting 1 string as input check whether the string is having spaces or not also check how many spaces are present in the string.
+
+s=input("enter:")
+char=" "
+if char in s:
+    print("space")
+else:
+    print("no space")
+output:
+enter:m a d h u
+space
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+#create a list of vowels get 1 string as input count vowels from the string and display the result
+
+
+l=["a","e","i","o","u","A","E","I","O","U"]
+s=input("enter the string:")
+count=0
+for i in s:
+    if i in l:
+        count=count+1
+print(count)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+math module
+program:
+import math
+print("CEIL 12.5:", math.ceil(12.5))
+print("FLOOR 12.5:",math.floor(12.5))
+print("SQRT 345:",math.sqrt(345))
+print("FAactorial 3:",math.factorial(3))
+print("Power 2,3:",math.pow(2,3))
+print("Remainder 10,3:",math.fmod(10,3))
+a,b=divmod(10,3)
+print(a,b)
+
+output:
+CEIL 12.5: 13
+FLOOR 12.5: 12
+SQRT 345: 18.57417562100671
+FAactorial 3: 6
+Power 2,3: 8.0
+Remainder 10,3: 1.0
+3 1
+
+
+
+
+
+
+
+
+
+
+
+
