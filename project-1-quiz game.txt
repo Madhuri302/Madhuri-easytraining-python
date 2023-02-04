@@ -1,0 +1,114 @@
+--------------------------------------PROJECT-----------------------------------------------
+PROJECT1:
+Designing a quiz game.
+q1="""who is the first prime minister of india ?
+a.Jawahar lal nehru
+b.Sarojini naidu
+c.Mahatama gandhi
+d.Subhash chandra bose"""
+q2="""who is your favourite hero?
+a.Allu Arjun
+b.Prabhas
+c.Vijay devarakonda
+d.Pawan kalyan"""
+q3="""who is the president of america?
+a.Donald trump
+b.Joe baiden
+c.Nelson mandela
+d.Amith shah"""
+q4="""how many colour are ther in a rainbow?
+a.six
+b.five
+c.seven
+d.two"""
+q5="""what is the full form of NSS?
+a.National service scheme
+b.National supply scheme
+c.National service of state
+d.National social service"""
+
+questions={q1:"a",q2:"d",q3:"b",q4:"c",q5:"a"}
+
+name=input("Hii whats ur name?")
+print("hello",name,"welcome to quiz")
+score=0
+for i in questions:
+    print()
+    print(i)
+    flag1=input("do you want to skip this ques (yes/no)")
+    if flag1=="yes":
+        continue
+    ans=input("enter your answer")
+    if ans==questions[i]:
+        print("wow! you got one point")
+        score=score+1
+        print("your current score is:",score)
+    else:
+        print("wrong answer,u lost 1 point")
+        score=score-1
+        print("your current score is:",score)
+    flag2=input("do you want to quit? type(yes/no)")
+    if flag2=="yes":
+        break
+print("your total score is",score)
+#output:
+Hii whats ur name?Madhuri
+hello Madhuri welcome to quiz
+
+who is the first prime minister of india ?
+a.Jawahar lal nehru
+b.Sarojini naidu
+c.Mahatama gandhi
+d.Subhash chandra bose
+do you want to skip this ques (yes/no)no
+enter your answera
+wow! you got one point
+your current score is: 1
+do you want to quit? type(yes/no)no
+
+who is your favourite hero?
+a.Allu Arjun
+b.Prabhas
+c.Vijay devarakonda
+d.Pawan kalyan
+do you want to skip this ques (yes/no)no
+enter your answerd
+wow! you got one point
+your current score is: 2
+do you want to quit? type(yes/no)no
+
+who is the president of america?
+a.Donald trump
+b.Joe baiden
+c.Nelson mandela
+d.Amith shah
+do you want to skip this ques (yes/no)no
+enter your answerb
+wow! you got one point
+your current score is: 3
+do you want to quit? type(yes/no)no
+
+how many colour are ther in a rainbow?
+a.six
+b.five
+c.seven
+d.two
+do you want to skip this ques (yes/no)no
+enter your answerc
+wow! you got one point
+your current score is: 4
+do you want to quit? type(yes/no)no
+
+what is the full form of NSS?
+a.National service scheme
+b.National supply scheme
+c.National service of state
+d.National social service
+do you want to skip this ques (yes/no)no
+enter your answera
+wow! you got one point
+your current score is: 5
+do you want to quit? type(yes/no)no
+your total score is 5
+>>> 
+

@@ -1,0 +1,47 @@
+import time
+def countdown(t):
+
+    while t:
+        mins,secs = divmod(t, 60)
+        timer = "{:02d}:{:02d}" .format(mins,secs)
+        print(timer)
+        time.sleep(0)
+        t -= 1
+
+    print("FINISHED")
+
+t=input("enter the time in seconds:")
+countdown(int(t))
+output:
+enter the time in seconds:30
+00:30
+00:29
+00:28
+00:27
+00:26
+00:25
+00:24
+00:23
+00:22
+00:21
+00:20
+00:19
+00:18
+00:17
+00:16
+00:15
+00:14
+00:13
+00:12
+00:11
+00:10
+00:09
+00:08
+00:07
+00:06
+00:05
+00:04
+00:03
+00:02
+00:01
+FINISHED

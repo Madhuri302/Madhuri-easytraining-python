@@ -1,0 +1,329 @@
+EXCEPTION HANDLING:-
+when there is exception,the developer does not want interruption or disturbance in the program flow to achieve this we are using exception handling.
+#exception handling:
+a=100
+b=0
+
+try:#u r telling this may have error,u try
+    print(a/b)
+#except exception:#u saying if error there i handle
+#print("cant divide any number by 0"
+except Exception as e:
+    print("please note number cant be divided by zero",e)
+    
+print("bye")
+output:
+please note number cant be divided by zero division by zero
+bye
+exception program2:
+a=10
+b=10
+try:
+    print("resource open")
+    print(a/b)
+
+except Exception as e:
+    print("dont give second number as zero",e)
+    
+finally:
+    print("resource closed")
+output:
+resource open
+1.0
+resource closed
+#specialised errors:-
+for those specific errors only those exception blocks will get executed
+a=10
+try:
+    b=int(input("enter number"))
+    print("resource open")
+    print(a/b)
+except ZeroDivisionError as e:
+    print("please note number cant be divided by zero",e)
+except ValueError as e:
+    print("invalid input",e)
+except Exception as e:
+    print("other error",e)
+finally:
+    print("resource closed")
+    
+output:
+enter number2
+resource open
+5.0
+resource closed
+
+#exception using raise function:
+x=2
+if x%2!=0:
+    raise Exception("x should be even number")
+else:
+     print("x is even number..correct")
+output:
+x is even number..correct
+
+#oops:(object oriented programming language)
+its an efficient concept used in all object oriented programming languages (java and python)
+for multiple reasons we use oops concept,for ex:-code reusability,data security,hiding data
+class:-
+its a blue print ex:birds,laptops
+object:-
+its a thing created based on class 
+note:one class can have multiple objects
+class is birds objects are (parrot,peacock)
+class is laptop objects are(lenova,hp,dell)
+
+--------------------------------------PROJECTS-----------------------------------------------
+PROJECT1:
+Designing a quiz game.
+q1="""who is the first prime minister of india ?
+a.Jawahar lal nehru
+b.Sarojini naidu
+c.Mahatama gandhi
+d.Subhash chandra bose"""
+q2="""who is your favourite hero?
+a.Allu Arjun
+b.Prabhas
+c.Vijay devarakonda
+d.Pawan kalyan"""
+q3="""who is the president of america?
+a.Donald trump
+b.Joe baiden
+c.Nelson mandela
+d.Amith shah"""
+q4="""how many colour are ther in a rainbow?
+a.six
+b.five
+c.seven
+d.two"""
+q5="""what is the full form of NSS?
+a.National service scheme
+b.National supply scheme
+c.National service of state
+d.National social service"""
+
+questions={q1:"a",q2:"d",q3:"b",q4:"c",q5:"a"}
+
+name=input("Hii whats ur name?")
+print("hello",name,"welcome to quiz")
+score=0
+for i in questions:
+    print()
+    print(i)
+    flag1=input("do you want to skip this ques (yes/no)")
+    if flag1=="yes":
+        continue
+    ans=input("enter your answer")
+    if ans==questions[i]:
+        print("wow! you got one point")
+        score=score+1
+        print("your current score is:",score)
+    else:
+        print("wrong answer,u lost 1 point")
+        score=score-1
+        print("your current score is:",score)
+    flag2=input("do you want to quit? type(yes/no)")
+    if flag2=="yes":
+        break
+print("your total score is",score)
+#output:
+Hii whats ur name?Madhuri
+hello Madhuri welcome to quiz
+
+who is the first prime minister of india ?
+a.Jawahar lal nehru
+b.Sarojini naidu
+c.Mahatama gandhi
+d.Subhash chandra bose
+do you want to skip this ques (yes/no)no
+enter your answera
+wow! you got one point
+your current score is: 1
+do you want to quit? type(yes/no)no
+
+who is your favourite hero?
+a.Allu Arjun
+b.Prabhas
+c.Vijay devarakonda
+d.Pawan kalyan
+do you want to skip this ques (yes/no)no
+enter your answerd
+wow! you got one point
+your current score is: 2
+do you want to quit? type(yes/no)no
+
+who is the president of america?
+a.Donald trump
+b.Joe baiden
+c.Nelson mandela
+d.Amith shah
+do you want to skip this ques (yes/no)no
+enter your answerb
+wow! you got one point
+your current score is: 3
+do you want to quit? type(yes/no)no
+
+how many colour are ther in a rainbow?
+a.six
+b.five
+c.seven
+d.two
+do you want to skip this ques (yes/no)no
+enter your answerc
+wow! you got one point
+your current score is: 4
+do you want to quit? type(yes/no)no
+
+what is the full form of NSS?
+a.National service scheme
+b.National supply scheme
+c.National service of state
+d.National social service
+do you want to skip this ques (yes/no)no
+enter your answera
+wow! you got one point
+your current score is: 5
+do you want to quit? type(yes/no)no
+your total score is 5
+>>> 
+
+------------------------------------------PROJECT2-----------------------------------------------
+import time
+def countdown(t):
+
+    while t:
+        mins,secs = divmod(t, 60)
+        timer = "{:02d}:{:02d}" .format(mins,secs)
+        print(timer)
+        time.sleep(0)
+        t -= 1
+
+    print("FINISHED")
+
+t=input("enter the time in seconds:")
+countdown(int(t))
+output:
+enter the time in seconds:30
+00:30
+00:29
+00:28
+00:27
+00:26
+00:25
+00:24
+00:23
+00:22
+00:21
+00:20
+00:19
+00:18
+00:17
+00:16
+00:15
+00:14
+00:13
+00:12
+00:11
+00:10
+00:09
+00:08
+00:07
+00:06
+00:05
+00:04
+00:03
+00:02
+00:01
+FINISHED
+
+-------------------------------------------PROJECT3------------------------------------------
+#flames project:
+name1=input("enter the name1:").lower()
+name2=input("enter the name2:").lower()
+
+name1=name1.replace(' ',' ')
+name2=name2.replace(' ',' ')
+print(name1)
+print(name2)
+
+for i in name1:
+    for j in name2:
+        if i==j:
+            name1=name1.replace(i,' ',1)
+            name2=name2.replace(j,' ',1)
+            break
+count=len(name1+name2)
+print(count)
+if count>0:
+    list1=["friends","lover","affectionate","marriage","enemies","siblings"]
+    while len(list1)>1:
+        c=count%len(list1)
+        s_index=c-1
+
+        if s_index>=0:
+            left=list1[:s_index]
+            right=list1[s_index+1:]
+            list1=right+left
+        else:
+            list1=list1[:len(list1)-1]
+    print("relationship:",list1[0])
+else:
+    print("enter different names")
+output:
+enter the name1:madhuri
+enter the name2:navya
+madhuri
+navya
+12
+relationship: affectionate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
